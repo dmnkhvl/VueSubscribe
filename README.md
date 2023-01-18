@@ -1,6 +1,6 @@
-# vue-test
+# VueSubscribe
 
-This template should help get you started developing with Vue 3 in Vite.
+Trying subscribe button in Vue3 Options API
 
 ## Recommended IDE Setup
 
