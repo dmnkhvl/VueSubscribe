@@ -14,7 +14,11 @@
           type="email"
           placeholder="Email address"
         />
-        <button class="bg-vue-green px-4 py-2 rounded-full text-vue-dark-green font-medium">Subscribe</button>
+        <button
+          class="bg-vue-green px-4 py-2 rounded-full text-vue-dark-green font-medium"
+        >
+          Subscribe
+        </button>
       </form>
       <p class="mt-4">
         You can read the previous issues and listen to our podcast at
@@ -28,7 +32,7 @@
         Subscribed users:
       </h4>
       <ul class="mt-2 text-center">
-        <li v-for="(user,index) in users" :key="index">{{ user }}</li>
+        <li v-for="(user, index) in users" :key="index">{{ user }}</li>
       </ul>
     </div>
   </main>
@@ -38,14 +42,14 @@ export default {
   data() {
     return {
       users: ["dev@dmnkhvl.eu"],
-      inputValue: ''
+      inputValue: "",
     };
   },
   methods: {
     addSubscriber() {
-      this.users.push(this.inputValue)
-      this.inputValue = ''
-    }
+      this.users.push(this.inputValue);
+      this.inputValue = "";
+    },
   },
 };
 </script>

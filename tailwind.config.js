@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         "vue-green": "#00dc82",
-        "vue-dark-green": '#011e26',
+        "vue-dark-green": "#011e26",
       },
     },
   },
