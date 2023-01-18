@@ -5,7 +5,7 @@
         Subscribe to our Weekly Newsletter
       </h3>
       <form
-        @submit.prevent="users.push(inputValue)"
+        @submit.prevent="addSubscriber"
         class="border-2 rounded-full p-1 border-gray-600 flex justify-between"
       >
         <input
@@ -14,7 +14,7 @@
           type="email"
           placeholder="Email address"
         />
-        <button class="bg-vue-green px-4 py-2 rounded-full">Subscribe</button>
+        <button class="bg-vue-green px-4 py-2 rounded-full text-vue-dark-green font-medium">Subscribe</button>
       </form>
       <p class="mt-4">
         You can read the previous issues and listen to our podcast at
@@ -28,7 +28,7 @@
         Subscribed users:
       </h4>
       <ul class="mt-2 text-center">
-        <li v-for="user in users">{{ user }}</li>
+        <li v-for="(user,index) in users" :key="index">{{ user }}</li>
       </ul>
     </div>
   </main>
@@ -38,7 +38,14 @@ export default {
   data() {
     return {
       users: ["dev@dmnkhvl.eu"],
+      inputValue: ''
     };
+  },
+  methods: {
+    addSubscriber() {
+      this.users.push(this.inputValue)
+      this.inputValue = ''
+    }
   },
 };
 </script>
