@@ -1,6 +1,6 @@
 <template>
   <main class="flex items-center align-center bg-black min-h-screen text-white">
-    <div class="max-w-screen-lg mx-auto">
+    <div class="max-w-screen-lg mx-auto px-4">
       <h3 class="text-center mb-4 text-xl font-semibold">
         Subscribe to our Weekly Newsletter
       </h3>
@@ -10,7 +10,7 @@
       >
         <input
           v-model="inputValue"
-          class="bg-transparent border-none focus:outline-none ml-4"
+          class="bg-transparent border-none focus:outline-none ml-4 w-full"
           type="email"
           placeholder="Email address"
         />
@@ -20,7 +20,7 @@
           Subscribe
         </button>
       </form>
-      <p class="mt-4">
+      <p class="mt-4 text-center">
         You can read the previous issues and listen to our podcast at
         <a
           href="https://tailwindcss.com/docs/guides/vite#vue"
